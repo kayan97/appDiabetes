@@ -1,0 +1,99 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form [formGroup]="form">
+    <ion-item>
+      <ion-label stacked>Nome</ion-label>
+      <ion-input type="text" formControlName="nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label stacked>Data</ion-label>
+        <ion-input type="date" formControlName="data"></ion-input>
+      </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Café da Manhã</ion-label>
+      <ion-input type="number" formControlName="cafedaManha"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Pós Café</ion-label>
+      <ion-input type="number" formControlName="poscafe"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Almoço</ion-label>
+      <ion-input type="number" formControlName="almoco"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Pós Almoço</ion-label>
+      <ion-input type="number" formControlName="posalmoco"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Café da Tarde</ion-label>
+      <ion-input type="number" formControlName="cafedatarde"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Janta</ion-label>
+      <ion-input type="number" formControlName="janta"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Pós Janta</ion-label>
+      <ion-input type="number" formControlName="posjanta"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Antes de dormi</ion-label>
+      <ion-input type="number" formControlName="antesdedormi"></ion-input>
+    </ion-item>
+
+    <ion-item *ngIf="!form.controls.nome.valid && (form.controls.nome.dirty || form.controls.nome.touched)" color="danger">
+      <div [hidden]="!form.controls.nome.errors.required">
+        O Campo é Obrigatório
+      </div>
+    </ion-item>
+
+    <ion-item *ngIf="!form.controls.data.valid && (form.controls.data.dirty || form.controls.data.touched)" color="danger">
+      <div [hidden]="!form.controls.data.errors.required">
+        O Campo é Obrigatório
+      </div>
+    </ion-item>
+
+    <ion-item *ngIf="!form.controls.cafedaManha.valid && (form.controls.cafedaManha.dirty || form.controls.cafedaManha.touched)" color="danger">
+      <div [hidden]="!form.controls.cafedaManha.errors.required">
+        O Campo é Obrigatório
+      </div>
+    </ion-item>
+
+    <ion-item *ngIf="!form.controls.almoco.valid && (form.controls.almoco.dirty || form.controls.almoco.touched)" color="danger">
+      <div [hidden]="!form.controls.almoco.errors.required">
+        O Campo é Obrigatório
+      </div>
+    </ion-item>
+
+    <ion-item *ngIf="!form.controls.janta.valid && (form.controls.janta.dirty || form.controls.janta.touched)" color="danger">
+      <div [hidden]="!form.controls.janta.errors.required">
+        O Campo é Obrigatório
+      </div>
+    </ion-item>
+
+    <div padding>
+      <button ion-button block type="submit" (click)="onSubmit()" [disabled]="!form.valid">Salvar</button>
+    </div>
+  </form>
+</ion-content>

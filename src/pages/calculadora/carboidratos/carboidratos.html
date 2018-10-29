@@ -1,0 +1,36 @@
+
+<ion-header>
+
+    <ion-navbar color="azul3">
+        <button ion-button menuToggle >
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>Carboidratos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-card>
+        <ion-card-content>
+          <p id=aviso>
+            Para realizar o calculo, digite o valor total do consumo de Carboidratos abaixo. Em seguida, clique em calcular.
+          </p>
+        </ion-card-content>
+    </ion-card>
+
+<ion-item>
+  <ion-label floating>Valor do Carboidrato</ion-label>
+  <ion-input type="number" [(ngModel)]="calculo"></ion-input>
+</ion-item>
+
+ <ion-card>
+  <ion-card-header>
+    Resultado: {{ total }}
+  </ion-card-header>
+ </ion-card>
+
+<button color="azul3" ion-button block (click)="calcular(calculo)">Calcular</button>
+
+</ion-content>

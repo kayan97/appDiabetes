@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Diabetes: sintomas, tratamentos e causas</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+<ion-card>
+  <ion-card-header>
+    Visão Geral
+  </ion-card-header>
+
+  <ion-list>
+    <button ion-item (click)="openTiposPage()">
+      <ion-icon name="paper" item-start></ion-icon>
+      O que é Diabetes?
+    </button>
+
+    <button ion-item (click)="openSintomasPage()">
+      <ion-icon name="paper" item-start></ion-icon>
+      Sintomas
+    </button>
+
+    <button ion-item (click)="openDiagnosticoPage()">
+      <ion-icon name="paper" item-start></ion-icon>
+      Diagnóstico de Diabetes
+    </button>
+
+    <button ion-item (click)="openTratamentoPage()">
+      <ion-icon name="paper" item-start></ion-icon>
+      Tratamento de Diabetes
+    </button>
+
+    <button ion-item (click)="openConvivendoPage()">
+      <ion-icon name="paper" item-start></ion-icon>
+      Convivendo (prognóstico)
+    </button>
+
+    <button ion-item (click)="openPrevencaoPage()">
+      <ion-icon name="paper" item-start></ion-icon>
+      Prevenção
+    </button>
+
+    <button ion-item (click)="openPerguntasPage()">
+      <ion-icon name="paper" item-start></ion-icon>
+      Curiosidades
+    </button>
+
+
+
+
+  </ion-list>
+</ion-card>
+</ion-content>

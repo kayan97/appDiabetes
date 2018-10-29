@@ -1,0 +1,32 @@
+
+<ion-header>
+
+    <ion-navbar color="primary">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Lista Controle Glicemico</ion-title>
+    </ion-navbar>
+
+  </ion-header>
+
+
+  <ion-content padding>
+      <ion-list>
+        <ion-item-sliding *ngFor="let p of perfil | async">
+            <ion-item>
+              <br>
+              <h3>{{p.data}}</h3>
+            </ion-item>
+          <ion-item-options side="left">
+            <button ion-button color="secundary" (click)="editPerfils(p)"><ion-icon name="create"></ion-icon>Abrir</button>
+          </ion-item-options>
+          <ion-item-options side="right">
+            <button ion-button color="danger" (click)="removePerfils(p.key)"><ion-icon name="trash"></ion-icon>Remover</button>
+          </ion-item-options>
+        </ion-item-sliding>
+      </ion-list>
+      <ion-fab right bottom>
+        <button ion-fab color="dark" (click)="newPerfils()"><ion-icon name="add"></ion-icon></button>
+      </ion-fab>
+    </ion-content>

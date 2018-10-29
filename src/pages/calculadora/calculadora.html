@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Calculadoras</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+<ion-card>
+
+  <ion-list>
+    <button ion-item (click)="openImcPage()">
+      <ion-icon name="calculator" item-start></ion-icon>
+      Calculadora IMC
+    </button>
+
+    <button ion-item (click)="openCalculoGlicosePage()">
+      <ion-icon name="calculator" item-start></ion-icon>
+      Calculadora Glicose
+    </button>
+
+    <button ion-item (click)="openCalculoCarboidratos()">
+      <ion-icon name="calculator" item-start></ion-icon>
+      Calculadora Carboidratos
+    </button>
+
+  </ion-list>
+</ion-card>
+</ion-content>
