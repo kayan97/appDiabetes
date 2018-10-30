@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AngularFireAuth } from 'angularfire2/auth';
+// import { AngularFireAuth } from 'angularfire2/auth';
 import { AccountProvider } from './../../providers/account/account';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { IonicPage, NavController, NavParams, ToastController, MenuController } from 'ionic-angular';
@@ -19,8 +19,7 @@ export class ForgotPasswordPage {
     private formBuilder: FormBuilder,
     public menu: MenuController,
     private accountProvider: AccountProvider,
-    private toast: ToastController,
-    private auth: AngularFireAuth) {
+    private toast: ToastController) {
 
       this.creatForm();
   }

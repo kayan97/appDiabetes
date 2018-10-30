@@ -1,9 +1,9 @@
 import { HomeProvider } from './../../providers/home/home';
 import { Component } from '@angular/core';
-import { NavController, ModalController, AlertController,NavParams } from 'ionic-angular';
+import { NavController,NavParams } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Observable } from 'rxjs/Observable';
-import *as moment from 'moment'
+// import *as moment from 'moment';
 // import { registerLocaleData } from '@angular/common';
 // import localePt from '@angular/common/locales/zh';
 // registerLocaleData(localePt);

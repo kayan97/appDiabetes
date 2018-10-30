@@ -31,7 +31,7 @@ export class MyApp {
 
       statusBar.styleDefault();
       splashScreen.hide();
-      // this.configurePushNotification();
+      this.configurePushNotification();
 
       this.initializeApp();
       this.pages = [
@@ -55,8 +55,7 @@ export class MyApp {
   }
 
   openPage(page) {
-    // Reset the content nav to have just this page
-    // we wouldn't want the back button to show in this scenario
+
     this.nav.setRoot(page.component);
   }
 
@@ -65,21 +64,21 @@ export class MyApp {
     this.nav.setRoot('SigninPage')
   }
 
-  // configurePushNotification(){
-  //   window["plugins"].OneSignal
-  //   .startInit('20d0e9fd-581c-43b5-a0e6-86cdaa377b57', '285421474651');
+  configurePushNotification(){
+    window["plugins"].OneSignal
+    .startInit('20d0e9fd-581c-43b5-a0e6-86cdaa377b57', '285421474651');
 
-  //   this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.Notification);
+    this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.Notification);
 
-  //   this.oneSignal.handleNotificationReceived().subscribe(() => {
+    this.oneSignal.handleNotificationReceived().subscribe(() => {
 
-  //   });
+    });
 
-  //   this.oneSignal.handleNotificationOpened().subscribe(() => {
+    this.oneSignal.handleNotificationOpened().subscribe(() => {
 
-  //   });
+    });
 
-  //   this.oneSignal.endInit();
+    this.oneSignal.endInit();
 
-  // }
+  }
 }

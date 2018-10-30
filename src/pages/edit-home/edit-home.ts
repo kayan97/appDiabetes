@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController  } from 'ionic-angular';
-import { AngularFireAuth } from 'angularfire2/auth';
+// import { AngularFireAuth } from 'angularfire2/auth';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { HomeProvider } from './../../providers/home/home';
 
@@ -23,8 +23,7 @@ export class EditHomePage {
               public navParams: NavParams,
               private formBuilder: FormBuilder,
               private toast: ToastController,
-              private homeProvider: HomeProvider,
-              private auth: AngularFireAuth){
+              private homeProvider: HomeProvider){
               this.home = this.navParams.data.home || {};
               this.SetupPageTitle();
               this.createForm();
